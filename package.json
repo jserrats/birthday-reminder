@@ -1,0 +1,21 @@
+{
+  "name": "automations",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-run": "tsc && node dist/src/index.js",
+    "debug": "tsc && node dist/src/test.js",
+    "build": "tsc"
+  },
+  "author": "jserrats.xyz",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "googleapis": "^144.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
+}

@@ -1,0 +1,4 @@
+services:
+    automations:
+      build: .
+      env_file: .env
