@@ -6,6 +6,7 @@ import http from 'http';
 import url from 'url';
 import fs from 'fs';
 import axios, { AxiosInstance } from 'axios';
+import cron from 'node-cron';
 
 console.log("[i] Starting Birthday reminder")
 
@@ -110,9 +111,6 @@ async function runOAuth2Flow() {
         // Print the URL for the user to visit
         console.log('Authorize this app by visiting this URL:', authUrl);
 
-        // Open the URL in the default browser
-        // await open(authUrl);
-
         // Start web server to handle the redirect
         return startWebServer(oauth2Client);
     }
@@ -204,5 +202,6 @@ function sendMessage(message: string) {
 
 }
 
-// Run the main function
-main();
+cron.schedule('* * * * *', () => {
+    main();
+});
