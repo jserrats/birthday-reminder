@@ -202,6 +202,6 @@ function sendMessage(message: string) {
 
 }
 
-cron.schedule('* * * * *', () => {
+cron.schedule('0 7 * * *', () => {
     main();
 });
